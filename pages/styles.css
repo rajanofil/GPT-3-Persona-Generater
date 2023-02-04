@@ -413,3 +413,29 @@ textarea {
         transform: rotate(360deg);
     }
 }
+
+.dropdown-container {
+    display:flexbox;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    color: darkcyan;
+    ;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fffffD;
+  }
+  
+  select {
+    width: 650px;
+    height: 40px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ffffff1a;
+    border-radius: 8px;
+    background-color:rgba(255, 248, 220, 0.612);
+
+  }
