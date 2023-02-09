@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import buildspaceLogo from '../assets/buildspace-logo.png';
 import React, { useState } from 'react';
 
 
@@ -61,27 +60,45 @@ const Home = () => {
               <option value="UI/UX designer">UI/UX designer</option>
               <option value="Labour">Labour</option>
               <option value="carpenter">carpenter</option>
-              <option value="lawye">lawyer</option>
+              <option value="lawyer">lawyer</option>
               <option value="Postal Worker">Postal Worker</option>
+              <option value="Product Manager">Product manager</option>
+              <option value="Architect">Architect</option>
               
             </select>
           </div>
           <div className="dropdown-container">
             <label htmlFor="select-age">Select Age:</label>
             <select id="select-age" onChange={onAgeSelected}>
-              <option value="">Please choose an age</option>
-              <option value="13">13</option>
-              <option value="25-34">25-34</option>
-              <option value="35+">35+</option>
+              <option value="">Please choose age</option>
+              <option value="below 18">below 18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="above 30">above 30</option>
+              
+              
             </select>
           </div>
-        <div className="prompt-buttons">
-          <a className="generate-button" onClick={callGenerateEndpoint}>
-            <div className="generate">
-              <p>Generate</p>
-            </div>
-          </a>
-        </div>
+          <div className="prompt-buttons">
+            <a
+              className={isGenerating ? 'generate-button loading' : 'generate-button'}
+                onClick={callGenerateEndpoint}
+            >
+              <div className="generate">
+              {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
+              </div>
+            </a>
+</div>
         </div>
         {apiOutput && (
   <div className="output">
